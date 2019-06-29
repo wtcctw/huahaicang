@@ -3,7 +3,7 @@ var qiang = function(){
 	if (btnActive) {
 		console.log("active: " + btnActive);
       	btnActive.click();
-      	// location.reload();
+      	location.reload();
 	} else {
 		console.log("not active!");
 		location.reload();
@@ -11,7 +11,21 @@ var qiang = function(){
 }
 
 
-setTimeout(qiang, 500);
+// setTimeout(qiang, 1000);
+
+setInterval(function(){
+	now = new Date();
+	var hour = now.getHours();
+	var min = now.getMinutes();
+	var sec = now.getSeconds();
+	var millisec = now.getMilliseconds();
+
+	if(hour == 12 && min ==0 && sec >= 0 && millisec >= 0) {
+		qiang();
+	} else {
+		console.log("now: " + now);
+	}
+}, 50);
 
 
 
