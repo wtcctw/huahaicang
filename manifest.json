@@ -4,19 +4,26 @@
   "description": "huahaicang",
   "version": "2.1",
   "permissions": [
-    "tabs", 
+    "tabs",
     "management",
     "webNavigation",
-    "http://*.huahaicang.cn/*", 
+    "http://*.huahaicang.cn/*",
     "https://*.huahaicang.cn/*"
   ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js"
+    ]
   },
   "content_scripts": [
     {
-      "matches": ["http://www.huahaicang.cn/*", "https://www.huahaicang.cn/*"], 
-      "js": ["huahaicang.js"],
+      "matches": [
+        "http://www.huahaicang.cn/*",
+        "https://www.huahaicang.cn/*"
+      ],
+      "js": [
+        "huahaicang.js"
+      ],
       "run_at": "document_idle"
     }
   ],

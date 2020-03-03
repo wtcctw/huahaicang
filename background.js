@@ -1,27 +1,27 @@
 function active(tabId) {
 
-  chrome.tabs.get(tabId, function(tab) {
+    chrome.tabs.get(tabId, function (tab) {
 
-    var id = tab.id,
-      url = tab.url
-    
-    if (url.indexOf('huahaicang') != -1) {
-      chrome.browserAction.setIcon({path:'images/online.png'});
-    } else {
-      chrome.browserAction.setIcon({path:'images/offline.png'});
-    }
-  })
+        var id = tab.id,
+            url = tab.url
+
+        if (url.indexOf('huahaicang') != -1) {
+            chrome.browserAction.setIcon({path: 'images/online.png'});
+        } else {
+            chrome.browserAction.setIcon({path: 'images/offline.png'});
+        }
+    })
 
 }
 
-chrome.tabs.onActivated.addListener(function(tabInfo) {
+chrome.tabs.onActivated.addListener(function (tabInfo) {
 
-  active(tabInfo.tabId)
+    active(tabInfo.tabId)
 
 })
 
-chrome.tabs.onUpdated.addListener(function(tabId) {
+chrome.tabs.onUpdated.addListener(function (tabId) {
 
-  active(tabId)
+    active(tabId)
 
 })

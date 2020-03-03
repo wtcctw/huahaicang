@@ -1,13 +1,13 @@
-var qiang = function(){	
-	var btnActive = document.querySelector('div.btn.active');	
-	if (btnActive) {
-		console.log("active: " + btnActive);
-      	btnActive.click();
-      	// location.reload();
-	} else {
-		console.log("not active!");
-		location.reload();
-	}
+var qiang = function () {
+    var btnActive = document.querySelector('div.btn.active');
+    if (btnActive) {
+        console.log("active: " + btnActive);
+        btnActive.click();
+        // location.reload();
+    } else {
+        console.log("not active!");
+        location.reload();
+    }
 }
 
 
@@ -28,7 +28,6 @@ setTimeout(qiang, 1000);
 // 		}
 // 	}
 // }, 50);
-
 
 
 // var outBtn;
